@@ -65,7 +65,11 @@ class Drink(db.Model):
             'recipe': short_recipe
         }
 
-
+    def supershort(self):
+        return {
+            'title': self.title,
+            'recipe': self.recipe
+        }
     '''
     long()
         long form representation of the Drink model

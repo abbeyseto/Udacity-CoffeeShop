@@ -6,7 +6,6 @@ from flask_cors import CORS
 
 from .database.models import db_drop_and_create_all, setup_db, Drink
 from .auth.auth import AuthError, requires_auth
-import requests
 
 app = Flask(__name__)
 setup_db(app)
@@ -36,7 +35,7 @@ CORS(app)
 #     payload = "grant_type=authorization_code&client_id=5uBXy4McPOt3F6hq9JwQG1JRrEJuBZhk&client_secret=eJTnjfbCGxpUKZaaP9qvat1NvU2lc4bP8BuueQNiAwPD_6DgXJzVKBNAnm3GQwFy&code=" + \
 #         code+"&redirect_uri=http://127.0.0.1:5000/"
 #     headers = {"Content-type": "application/x-www-form-urlencoded"}
-#     response = requests.post(url, data=payload, headers=headers)
+# .post(url, data=payload, headers=headers)
 #     data = response.json()
 #     print('DATA', data)
 #     token = data.get('access_token')
